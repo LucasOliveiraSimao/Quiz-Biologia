@@ -1,18 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".QuestionActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="8dp"
+            android:text="@string/label_question"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <RadioGroup
+            android:id="@+id/rg_alternatives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_title">
+
+            <RadioButton
+                android:id="@+id/rb_alternativeA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="a) 1/4" />
+
+            <RadioButton
+                android:id="@+id/rb_alternativeB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="b) 1/8" />
+
+            <RadioButton
+                android:id="@+id/rb_alternativeC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="c) 1/2" />
+
+            <RadioButton
+                android:id="@+id/rb_alternativeD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="d) 3/64" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_alternatives" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Quiz Biologia</string>
     <string name="splash_biology_quiz">Quiz Biologia</string>
+    <string name="label_question">Questão 1 (Unimep - RJ) Um homem apresenta o genótipo Aa Bb CC dd e sua esposa, o genótipo aa Bb cc Dd. Qual é a probabilidade desse casal ter um filho do sexo masculino e portador dos genes bb?</string>
+    <string name="next">Próxima</string>
+    <string name="finish">Finalizar</string>
+    <string name="label_scored">Você fez %1$d de %2$d</string>
+    <string name="congratulations">Parabéns</string>
 </resources>
