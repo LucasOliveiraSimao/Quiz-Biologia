@@ -6,19 +6,16 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.lucassimao.quizbiologia.databinding.ActivityQuestionBinding
+import com.lucassimao.quizbiologia.utils.answerA
+import com.lucassimao.quizbiologia.utils.answerB
+import com.lucassimao.quizbiologia.utils.answerC
+import com.lucassimao.quizbiologia.utils.answerD
 
 class QuestionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuestionBinding
 
     private var currentQuestion = 0
     private var score = 0
-
-    companion object {
-        const val answerA = 1
-        const val answerB = 2
-        const val answerC = 3
-        const val answerD = 4
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
