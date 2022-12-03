@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_image_size_alert_dialog">150dp</dimen>
+    <dimen name="default_title_size_alert_dialog">24sp</dimen>
+    <dimen name="default_subtitle_size_alert_dialog">16sp</dimen>
+    <dimen name="default_text_button_size_alert_dialog">16sp</dimen>
+
+    <dimen name="default_image_size_splash_screen">120dp</dimen>
+
+    <dimen name="default_button_margin_activity_question">16dp</dimen>
+    <dimen name="default_text_margin_activity_question">8dp</dimen>
+    <dimen name="default_text_size_activity_question">24sp</dimen>
+</resources>
