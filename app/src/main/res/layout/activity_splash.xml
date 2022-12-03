@@ -9,13 +9,14 @@
 
     <ImageView
         android:id="@+id/splash_image"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/default_image_size_splash_screen"
+        android:layout_height="@dimen/default_image_size_splash_screen"
         android:layout_marginTop="250dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/splash_title"
