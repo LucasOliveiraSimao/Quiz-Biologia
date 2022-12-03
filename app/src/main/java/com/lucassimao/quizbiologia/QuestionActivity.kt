@@ -14,7 +14,7 @@ import com.lucassimao.quizbiologia.utils.answerD
 class QuestionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuestionBinding
 
-    private var currentQuestion = 0
+    private var indexCurrentQuestion = 0
     private var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,17 +49,17 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun initViews() {
         binding.apply {
-            questionTitle.text = initListQuestions()[currentQuestion].question
-            rbAlternativeA.text = initListQuestions()[currentQuestion].alternativeA
-            rbAlternativeB.text = initListQuestions()[currentQuestion].alternativeB
-            rbAlternativeC.text = initListQuestions()[currentQuestion].alternativeC
-            rbAlternativeD.text = initListQuestions()[currentQuestion].alternativeD
+            questionTitle.text = initListQuestions()[indexCurrentQuestion].question
+            rbAlternativeA.text = initListQuestions()[indexCurrentQuestion].alternativeA
+            rbAlternativeB.text = initListQuestions()[indexCurrentQuestion].alternativeB
+            rbAlternativeC.text = initListQuestions()[indexCurrentQuestion].alternativeC
+            rbAlternativeD.text = initListQuestions()[indexCurrentQuestion].alternativeD
 
             buttonIsEnable(false)
 
             btnNext.setOnClickListener {
-                currentQuestion++
-                nextQuestion(currentQuestion)
+                indexCurrentQuestion++
+                nextQuestion(indexCurrentQuestion)
             }
 
             checkAlternatives()
@@ -96,7 +96,7 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     private fun checkCorrectAnswer(answer: Int) {
-        if (answer == initListQuestions()[currentQuestion].correctAnswer) {
+        if (answer == initListQuestions()[indexCurrentQuestion].correctAnswer) {
             score++
         }
     }
