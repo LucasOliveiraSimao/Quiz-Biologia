@@ -29,15 +29,20 @@ class QuestionActivity : AppCompatActivity() {
     private fun setupAlertDialog(score: Int) {
         val alert = AlertDialog.Builder(this).create()
         val view = layoutInflater.inflate(R.layout.custom_alert_dialog, null)
+
         val dialogDismiss = view.findViewById<Button>(R.id.btn_dialogDismiss)
         val dialogMessage = view.findViewById<TextView>(R.id.txt_scored)
 
-        dialogMessage.text =
-            getString(R.string.label_scored, score.minus(1), initListQuestions().size)
+        val message = getString(R.string.label_scored, score.minus(1), initListQuestions().size)
+
+        dialogMessage.text = message
+
         alert.setView(view)
+
         dialogDismiss.setOnClickListener {
             finish()
         }
+
         alert.setCancelable(false)
         alert.show()
     }
